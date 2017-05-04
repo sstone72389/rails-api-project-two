@@ -17,3 +17,5 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+
+task1 = Task.create([{name: 'take out the trash'}])
