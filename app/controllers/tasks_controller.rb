@@ -10,8 +10,10 @@ class TasksController < ApplicationController
   # GET /tasks
   def index
     # view by user_id
-    @tasks = Task.all
-    # @tasks = current_user.tasks # .all?
+    # @tasks = Task.all
+    # test_value = User.find(params[:id])
+    # current_user = User.find(params[:id])
+    @tasks = current_user.tasks
 
     render json: @tasks
   end
