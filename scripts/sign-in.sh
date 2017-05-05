@@ -1,5 +1,5 @@
 #!/bin/bash
-# EMAIL="mom" PASSWORD="1" sh sign-in.sh
+# EMAIL="shs" PASSWORD="1" sh sign-in.sh
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/sign-in"

@@ -3,16 +3,13 @@
 # git clean -n, -f if this doesn't work. It is set exactly as you had it before
 # the "current_user" issue
 
-class TasksController < ApplicationController
+class TasksController < ProtectedController
   before_action :set_task, only: %i[show update destroy]
-  before_action :validate_user, only: %i[index create update destroy set_task]
 
   # GET /tasks
   def index
     # view by user_id
     # @tasks = Task.all
-    # test_value = User.find(params[:id])
-    # current_user = User.find(params[:id])
     @tasks = current_user.tasks
 
     render json: @tasks
@@ -57,12 +54,7 @@ class TasksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_task
       # @task = Task.find(params[:id])
-      validate_user
       @task = current_user.tasks.find(params[:id])
-    end
-
-    def validate_user
-      set_current_user
     end
 
     # Only allow a trusted parameter "white list" through.
