@@ -1,5 +1,5 @@
 #!/bin/bash
-# TEXT="take out trash" TOKEN="BAhJIiU1M2I4ZDc3OWJhNDY2YzJiOGZlM2NkNDExYjlhODEyYgY6BkVG--380d545ed11d1dfdd4819da2662137691c299669" sh create_task.sh
+# TEXT="eat" TOKEN="BAhJIiU2ZjMwMTVhN2MxZjk3MGE4OGU1MThlZGExOWM5YzdlOQY6BkVG--bd8156187c2f5317db8f2bded001abb6f43ddf26" sh create_task.sh
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/tasks"

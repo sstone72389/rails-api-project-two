@@ -1,21 +1,30 @@
-class TasksController < OpenReadController
-  before_action :set_task, only: [:show, :update, :destroy]
+# frozen_string_literal: true
+
+# git clean -n, -f if this doesn't work. It is set exactly as you had it before
+# the "current_user" issue
+
+class TasksController < ApplicationController
+  before_action :set_task, only: %i[show update destroy]
+  before_action :validate_user, only: %i[index create update destroy set_task]
 
   # GET /tasks
   def index
-    # @tasks = Task.all
-    @task = current_user.tasks.all
+    # view by user_id
+    @tasks = Task.all
+    # @tasks = current_user.tasks # .all?
 
     render json: @tasks
   end
 
   # GET /tasks/1
   def show
-    render json: @task = current_user.tasks.find(params[:id])
+    render json: @task
+    # render json: @task = current_user.tasks.find(params[:id])
   end
 
   # POST /tasks
   def create
+    # get current user_id from ApplicationController
     @task = current_user.tasks.build(task_params)
 
     if @task.save
@@ -27,7 +36,7 @@ class TasksController < OpenReadController
 
   # PATCH/PUT /tasks/1
   def update
-    @task = current_user.tasks.find(params[:id])
+    # @task = current_user.tasks.find(params[:id])
     if @task.update(task_params)
       render json: @task
     else
@@ -37,14 +46,21 @@ class TasksController < OpenReadController
 
   # DELETE /tasks/1
   def destroy
-    @task = current_user.tasks.find(params[:id])
+    # may need for destroy
+    # @task = current_user.tasks.find(params[:id])
     @task.destroy
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task
-      @task = Task.find(params[:id])
+      # @task = Task.find(params[:id])
+      validate_user
+      @task = current_user.tasks.find(params[:id])
+    end
+
+    def validate_user
+      set_current_user
     end
 
     # Only allow a trusted parameter "white list" through.
