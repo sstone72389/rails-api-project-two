@@ -1,6 +1,6 @@
-Put link to live application here: INPUT LINK HERE
+Put link to live application here: <https://sstone72389.github.io/front-end-project-two/>
 
-Explanation of project: (Main overview) This application’s purpose is to provide a means of organization to the user. As per the title suggest: it is to help keep one on track in their day to day life. This will be achieved via user input and interaction with the app. A user will be able to monitor their day to tasks and use an interactive ‘reminders’ checklist to ensure they ‘did not forget’ a desired activity or action. Users will be able to manipulate the data that they input as desired tasks to acquire data about previously completed tasks or tasks that have not been completed.
+Explanation of project: This application’s purpose is to provide a means of organization to the user. As per the title suggests: it is to help keep one on track in their day to day life. This will be achieved via user input and interaction with the app. A user will be able to monitor their day to tasks and use an interactive ‘reminders’ checklist to ensure they ‘did not forget’ a desired activity or action. Users will be able to manipulate the data that they input as desired.
 
 Purpose of this repo: The purpose of this repo is specifically for back-end functionality. It will allow users to interact with the app (detailed above) to POST, PUT/PATCH, UPDATE and DELETE data respectively. It utilizes an ORM (Rails) to communicate with the API and render data received in the browser. It also allows for user authentication using similar functionality.
 
@@ -16,7 +16,7 @@ As a client, I want to be able to sign up for an account (POST).
 As a client, I want to be able to log into my account (POST).
 As a client, I want to be able to log out of my account (DELETE).
 As a client, I want to be able to change my password (PATCH).
-As a client I want to be able to be able to see the amount of completed tasks (GET).
+As a client I want to be able to be able to view tasks (GET).
 As a client, I want to be able to input a task to the checklist (POST).
 As a client, I want to be able to delete a task (DELETE).
 As a client, I want to be able to modify a task (PATCH).
