@@ -8,7 +8,7 @@ Purpose of this repo: The purpose of this repo is specifically for back-end func
 
 How it works: Per the above explantion, by utilizing Rails as an ORM, this repo allows for to communication with the API and renders data received in the browser. It also allows for user authentication.
 
-Approach taken when building: My approach to the back end was very systematic. Using online resources and class notes, I was able to build my database step by step. I tested all functionality with CURL scripts before moving on to the fornt end.
+Approach taken when building: My approach to the back end was very systematic. Using online resources and class notes, I was able to build my database step by step. I tested all functionality with CURL scripts before moving on to the front end.
 
 Unsolved problems: I would like to make this app a bit more user friendly. I want to be able to toggle the is_complete column with user input. I will be doing this on a refactor.
 
