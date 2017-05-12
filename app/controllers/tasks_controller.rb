@@ -10,9 +10,10 @@ class TasksController < ProtectedController
   def index
     # view by user_id
     # @tasks = Task.all
+    # adds edited item to top of list (refactor)
     @tasks = current_user.tasks
-
-    render json: @tasks
+    sorted = @tasks.order('updated_at DESC')
+    render json: sorted
   end
 
   # GET /tasks/1
